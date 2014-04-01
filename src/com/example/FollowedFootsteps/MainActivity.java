@@ -14,6 +14,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import com.example.FollowedFootsteps.FriendFragment;
+import com.example.FollowedFootsteps.LeaderboardFragment;
+import com.example.FollowedFootsteps.PictureFragment;
 
 
 public class MainActivity extends Activity {
@@ -97,6 +100,15 @@ public class MainActivity extends Activity {
 		case 1:
 			fragment = new ProfileFragment();
 			break;
+        case 2:
+            fragment = new FriendFragment();
+            break;
+        case 3:
+            fragment = new PictureFragment();
+            break;
+        case 4:
+            fragment = new LeaderboardFragment();
+            break;
 		}
 		FragmentManager fragmentManager = getFragmentManager();
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
