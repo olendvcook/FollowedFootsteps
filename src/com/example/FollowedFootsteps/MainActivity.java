@@ -109,6 +109,9 @@ public class MainActivity extends Activity {
         case 4:
             fragment = new LeaderboardFragment();
             break;
+        case 5:
+            fragment = new RoutesFragment();
+            break;
 		}
 		FragmentManager fragmentManager = getFragmentManager();
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

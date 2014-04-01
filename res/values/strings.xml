@@ -13,5 +13,8 @@
     </string-array>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+    <string name="following_course">Followed routes</string>
+    <string name="creating_course">Create route</string>
+    <string name="news_feed">News feed</string>
 
 </resources>
