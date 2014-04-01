@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">FollowedFootsteps</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="titles_array">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Friends</item>
+        <item>Routes</item>
+        <item>Pictures</item>
+        <item>Leaderboards</item>
+    </string-array>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
 </resources>
