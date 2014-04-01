@@ -1,4 +1,4 @@
-package com.example.followedfootsteps;
+package com.example.FollowedFootsteps;
 
 import android.app.Fragment;
 import android.os.Bundle;

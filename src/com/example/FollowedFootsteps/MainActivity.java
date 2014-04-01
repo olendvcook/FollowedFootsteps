@@ -1,4 +1,4 @@
-package com.example.followedfootsteps;
+package com.example.FollowedFootsteps;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -52,6 +52,8 @@ public class MainActivity extends Activity {
        
 		
 		mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+
+        selectItem(0);
 	}
 
 	@Override
@@ -104,14 +106,15 @@ public class MainActivity extends Activity {
             fragment = new FriendFragment();
             break;
         case 3:
-            fragment = new PictureFragment();
-            break;
-        case 4:
-            fragment = new LeaderboardFragment();
-            break;
-        case 5:
             fragment = new RoutesFragment();
             break;
+        case 4:
+            fragment = new PictureFragment();
+            break;
+        case 5:
+            fragment = new LeaderboardFragment();
+            break;
+
 		}
 		FragmentManager fragmentManager = getFragmentManager();
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
