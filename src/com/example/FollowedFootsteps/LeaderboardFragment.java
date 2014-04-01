@@ -13,5 +13,8 @@ public class LeaderboardFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(com.example.followedfootsteps.R.layout.fragment_leaderboard, container, false);
+
+        Resources res = getResources();
+        Drawable drawable = res.getDrawable(R.drawable.myimage);
     }
 }

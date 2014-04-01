@@ -5,4 +5,38 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Eiffel Tower Route"
+            android:id="@+id/textView" android:layout_gravity="center_horizontal"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Step 5 of 5:"
+            android:id="@+id/textView2" android:layout_gravity="center_horizontal"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Take a Picture That Looks Like This:"
+            android:id="@+id/textView4" android:layout_gravity="center_horizontal"/>
+    <ImageView
+            android:layout_width="248dp"
+            android:layout_height="294dp"
+            android:id="@+id/imageView" android:layout_gravity="center_horizontal"
+            android:background="@drawable/eiffel_tower"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton" android:layout_gravity="center"
+            android:background="@android:drawable/ic_menu_camera"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Did you know? Erected in 1889 as the entrance arch to the 1889 World's Fair, it was initially criticised by some of France's leading artists and intellectuals for its design, but has become both a global cultural icon of France and one of the most recognizable structures in the world."
+            android:id="@+id/textView3" android:layout_gravity="center_horizontal" android:padding="5dp"/>
 </LinearLayout>
