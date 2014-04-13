@@ -1,5 +1,6 @@
-package com.example.FollowedFootsteps;
+package com.example.Explr;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.Fragment;
@@ -8,15 +9,16 @@ import android.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import com.example.FollowedFootsteps.FriendFragment;
-import com.example.FollowedFootsteps.LeaderboardFragment;
-import com.example.FollowedFootsteps.PictureFragment;
+import com.example.Explr.R;
 
 
 public class MainActivity extends Activity {
@@ -25,10 +27,17 @@ public class MainActivity extends Activity {
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle actionBarDrawerToggle;
 
+    WebView web;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+        web = (WebView) findViewById(R.id.webview01);
+        web.setWebViewClient(new myWebClient());
+        web.getSettings().setJavaScriptEnabled(true);
+        web.loadUrl("http://www.explr.net");
 		
 		mTitles = getResources().getStringArray(R.array.titles_array);
 		mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
@@ -103,15 +112,12 @@ public class MainActivity extends Activity {
 			fragment = new ProfileFragment();
 			break;
         case 2:
-            fragment = new FriendFragment();
-            break;
-        case 3:
             fragment = new RoutesFragment();
             break;
-        case 4:
+        case 3:
             fragment = new PictureFragment();
             break;
-        case 5:
+        case 4:
             fragment = new LeaderboardFragment();
             break;
 
@@ -129,5 +135,29 @@ public class MainActivity extends Activity {
 	public void setTitle(CharSequence title) {
 		getActionBar().setTitle(title);
 	}
+
+    public class myWebClient extends WebViewClient {
+        @Override
+        public void onPageStarted(WebView view, String url, Bitmap favicon) {
+
+            super.onPageStarted(view, url, favicon);
+        }
+
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && web.canGoBack()) {
+            web.goBack();
+            return true;
+        }
+        return super.onKeyDown(keyCode,event);
+    }
 
 }

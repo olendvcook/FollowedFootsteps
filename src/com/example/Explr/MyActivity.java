@@ -1,7 +1,8 @@
-package com.example.FollowedFootsteps;
+package com.example.Explr;
 
 import android.app.Activity;
 import android.os.Bundle;
+import com.example.Explr.R;
 
 public class MyActivity extends Activity {
     /**
